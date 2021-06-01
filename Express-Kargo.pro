@@ -9,15 +9,20 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    images.qrc \
+    Veri/VeriSiniflari/alici_bilgileri.cpp \
+    Veri/VeriSiniflari/sube_bilgileri.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    Veri/VeriSiniflari/alici_bilgileri.h \
+    Veri/VeriSiniflari/sube_bilgileri.h \
+    Veri/tanimlar.h \
     mainwindow.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    sinif.gorunum/kargo_takip.ui
 
 TRANSLATIONS += \
     Express-Kargo_tr_TR.ts

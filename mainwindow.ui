@@ -231,7 +231,7 @@
            </font>
           </property>
           <property name="suffix">
-           <string> </string>
+           <string/>
           </property>
           <property name="prefix">
            <string/>
@@ -639,7 +639,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -1235,11 +1235,72 @@
      <x>0</x>
      <y>0</y>
      <width>1616</width>
-     <height>26</height>
+     <height>24</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuDosya">
+    <property name="title">
+     <string>Dosya</string>
+    </property>
+    <addaction name="action_ptal"/>
+    <addaction name="actionKaydet"/>
+    <addaction name="separator"/>
+    <addaction name="action_k"/>
+   </widget>
+   <widget class="QMenu" name="menuKargo_Takip">
+    <property name="title">
+     <string>Kargo Takip</string>
+    </property>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_ubeler">
+    <property name="title">
+     <string>Şubeler</string>
+    </property>
+    <addaction name="actionYeni_ube_Ekle"/>
+    <addaction name="action_ubeler"/>
+   </widget>
+   <widget class="QMenu" name="menuKargo_G_nder">
+    <property name="title">
+     <string>Kargo Gönder</string>
+    </property>
+   </widget>
+   <addaction name="menuDosya"/>
+   <addaction name="menuKargo_G_nder"/>
+   <addaction name="menuKargo_Takip"/>
+   <addaction name="menu_ubeler"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_ptal">
+   <property name="text">
+    <string>İptal</string>
+   </property>
+  </action>
+  <action name="actionKaydet">
+   <property name="text">
+    <string>Kaydet</string>
+   </property>
+  </action>
+  <action name="action_k">
+   <property name="text">
+    <string>Çıkış</string>
+   </property>
+  </action>
+  <action name="actionYeni_ube_Ekle">
+   <property name="text">
+    <string>Yeni Şube Ekle</string>
+   </property>
+  </action>
+  <action name="action_ubeler">
+   <property name="text">
+    <string>Şubeler</string>
+   </property>
+  </action>
+  <action name="actionBilgiler">
+   <property name="text">
+    <string>Bilgiler</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
