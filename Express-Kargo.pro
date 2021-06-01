@@ -10,12 +10,14 @@ CONFIG += c++11
 
 SOURCES += \
     Veri/VeriSiniflari/alici_bilgileri.cpp \
+    Veri/VeriSiniflari/kargo_bilgileri.cpp \
     Veri/VeriSiniflari/sube_bilgileri.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     Veri/VeriSiniflari/alici_bilgileri.h \
+    Veri/VeriSiniflari/kargo_bilgileri.h \
     Veri/VeriSiniflari/sube_bilgileri.h \
     Veri/tanimlar.h \
     mainwindow.h

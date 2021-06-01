@@ -14,6 +14,10 @@ typedef qint16 AraMesafe;
 
 typedef double TelNo;
 
+typedef double ReelSayi ;
+
+typedef float DesiHesabi;
+
 typedef float ParaBirimi;
 
 typedef QString Metin;
