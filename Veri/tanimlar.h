@@ -49,7 +49,7 @@ class KRGKargoHizmetleri;
 
 #include <memory>
 
-typedef std::shared_ptr<KRGGondericiBilgileri> KRGondericiBilgileriPtr;
+typedef std::shared_ptr<KRGGondericiBilgileri> KRGGondericiBilgileriPtr;
 typedef std::shared_ptr<KRGAliciBilgileri> KRGAliciBilgileriPtr;
 typedef std::shared_ptr<KRGSubeBilgileri> KRGSubeBilgileriPtr;
 typedef std::shared_ptr<KRGKargoBilgileri> KRGKargoBilgileriPtr;

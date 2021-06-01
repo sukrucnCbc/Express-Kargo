@@ -1235,7 +1235,7 @@
      <x>0</x>
      <y>0</y>
      <width>1616</width>
-     <height>24</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuDosya">
@@ -1271,6 +1271,19 @@
    <addaction name="menu_ubeler"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionYeni_ube_Ekle"/>
+   <addaction name="action_ubeler"/>
+  </widget>
   <action name="action_ptal">
    <property name="text">
     <string>İptal</string>
