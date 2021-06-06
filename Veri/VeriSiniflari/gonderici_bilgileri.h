@@ -55,7 +55,8 @@ private:
     IdTuru gondericiId;
 };
 
-
+QDataStream &operator<<(QDataStream &a, const KRGGondericiBilgileriPtr &b);
+QDataStream &operator>>(QDataStream &a, KRGGondericiBilgileriPtr &b);
 
 
 

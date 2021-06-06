@@ -15,7 +15,7 @@ public:
 
     explicit TemelVeriYoneticileri() { enSonId = 0; }
 
-    // 1. Yeni Gönderici Oluşturur
+    // 1. Yeni Kargo Oluşturur
 
     Ptr yeni() const
     {
@@ -23,35 +23,34 @@ public:
         return yeni;
     }
 
-    // 2. Listeye Gönderici Ekleme
+    // 2. Listeye Kargo Ekleme
 
-    void ekle(Ptr gonderici)
+    void ekle(Ptr kargo)
     {
         // ilacId = 0, enSonId = 0
-        gonderici->setId(enSonId++); // ilacId = 0, enSonId = 1
-        veriler.append(gonderici);
+        kargo->setId(enSonId++); // kargoId = 0, enSonId = 1
+        veriler.append(kargo);
     }
 
-    // 3. Listeden Gönderici Silme
+    // 3. Listeden Kargo Silme
 
-    Ptr sil(IdTuru gondericiId)
+    Ptr sil(IdTuru kargoId)
     {
         for (int i = 0; i < veriler.size(); i++) {
-            if (veriler[i]->getId() == gondericiId) {
+            if (veriler[i]->getId() == kargoId) {
                 Ptr sonuc = veriler.takeAt(i);
                 return sonuc;
             }
         }
-        throw QObject::tr("Aranılan veri bulunamadı! Silme işlemi iptal edildi!");
+        throw QObject::tr("Aranılan veri bulunamadı ! Silme işlemi iptal edildi!");
     }
 
-    Ptr sil(Ptr gonderici) { return sil(gonderici->getId()); }
+    Ptr sil(Ptr kargo) { return sil(kargo->getId()); }
 
-    // 5. Gönderici Arama
+    // 5. Kargo Arama
 
     Ptr ilkiniBul(Sart f)
-    {
-        // I. Yol
+    {       
         for (int i = 0; i < veriler.size(); i++) {
             Ptr veri_i = veriler[i];
             if (f(veri_i)) {
@@ -65,7 +64,6 @@ public:
 
     Ptr sonuncuyuBul(Sart f)
     {
-        // I. Yol
         for (int i = veriler.size() - 1; i >= 0; i--) {
             Ptr veri_i = veriler[i];
             if (f(veri_i)) {
@@ -96,11 +94,11 @@ protected:
 
     IdTuru enSonId;
 
-    template<class H, class M>
-    friend QDataStream &operator<<(QDataStream &stream, TemelVeriYoneticileri<H, M> &veri);
+    template<class E, class K>
+    friend QDataStream &operator<<(QDataStream &stream, TemelVeriYoneticileri<E, K> &veri);
 
-    template<class F, class B>
-    friend QDataStream &operator>>(QDataStream &stream, TemelVeriYoneticileri<F, B> &veri);
+    template<class C, class B>
+    friend QDataStream &operator>>(QDataStream &stream, TemelVeriYoneticileri<C, B> &veri);
 };
 
 template<class V, class P>

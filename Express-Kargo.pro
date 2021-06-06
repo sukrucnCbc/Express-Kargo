@@ -13,7 +13,8 @@ SOURCES += \
     Veri/VeriSiniflari/gonderici_bilgileri.cpp \
     Veri/VeriSiniflari/kargo_bilgileri.cpp \
     Veri/VeriSiniflari/sube_bilgileri.cpp \
-    Veri/VeriYoneticileri/kargo_bilgileri_yoneticisi.cpp \
+    Veri/VeriYoneticileri/alici_yonetici.cpp \
+    Veri/VeriYoneticileri/gonderici_yonetici.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -22,7 +23,8 @@ HEADERS += \
     Veri/VeriSiniflari/gonderici_bilgileri.h \
     Veri/VeriSiniflari/kargo_bilgileri.h \
     Veri/VeriSiniflari/sube_bilgileri.h \
-    Veri/VeriYoneticileri/kargo_bilgileri_yoneticisi.h \
+    Veri/VeriYoneticileri/alici_yonetici.h \
+    Veri/VeriYoneticileri/gonderici_yonetici.h \
     Veri/VeriYoneticileri/temel_veri_yoneticileri.h \
     Veri/tanimlar.h \
     mainwindow.h

@@ -1,4 +1,5 @@
 #include "gonderici_bilgileri.h"
+#include <QtMath>
 
 KRGGondericiBilgileri::KRGGondericiBilgileri(QWidget *parent) : QMainWindow(parent)
 {
