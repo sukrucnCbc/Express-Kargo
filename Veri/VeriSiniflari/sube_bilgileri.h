@@ -8,6 +8,7 @@
 class KRGSubeBilgileri : public QMainWindow
 {
     Q_OBJECT
+
 public:
     explicit KRGSubeBilgileri(QWidget *parent = nullptr);
     Q_PROPERTY(Metin subeAdi READ getSubeAdi WRITE
@@ -20,6 +21,7 @@ public:
                setSubeTel NOTIFY subeTelDegisti)
     Q_PROPERTY(AraMesafe subeArasiKm READ getSubelerArasiKm WRITE
                setSubelerArasiKm NOTIFY subelerArasiKmDegisti)
+    Q_PROPERTY(IdTuru id READ getId WRITE setId NOTIFY idDegisti)
 
 
     Metin getSubeAdi() const;
@@ -27,6 +29,8 @@ public:
     Metin getSubeSorumlusu() const;
     TelNo getSubeTel() const;
     AraMesafe getSubelerArasiKm() const;
+    IdTuru getId() const;
+
 
 signals:
     void subeAdiDegisti(const Metin &value);
@@ -34,6 +38,7 @@ signals:
     void subeSorumlusuDegisti(const Metin &value);
     void subeTelDegisti(const TelNo &value);
     void subelerArasiKmDegisti(const AraMesafe &value);
+    void idDegisti(const IdTuru &value);
 
 
 public slots:
@@ -42,6 +47,7 @@ public slots:
     void setSubeSorumlusu(const Metin &value);
     void setSubeTel(const TelNo &value);
     void setSubelerArasiKm(const AraMesafe &value);
+    void setId(const IdTuru &value);
 
 
 private:
@@ -50,8 +56,7 @@ private:
     Metin subeSorumlusu;
     TelNo subeTel;
     AraMesafe subelerArasiKm;
-
-
+    IdTuru subeId;
 };
 
 #endif // SUBE_BILGILERI_H

@@ -74,10 +74,24 @@ void KRGSubeBilgileri::setSubelerArasiKm(const AraMesafe &value)
     emit subelerArasiKmDegisti(subelerArasiKm);
     subelerArasiKm = value;
 }
+
+IdTuru KRGSubeBilgileri::getId() const
+{
+    return subeId;
+}
+
+void KRGSubeBilgileri::setId(const IdTuru &value)
+{
+    if (value == subeId)
+        return;
+    subeId= value;
+    emit subeTelDegisti(subeId);
+    subeId = value;
+}
 QDataStream &operator<<(QDataStream &a, const KRGSubeBilgileriPtr &b)
 {
     a << b->getSubeAdi() << b->getSubeAdresi() << b->getSubeSorumlusu() << b->getSubeTel()
-      << b->getSubelerArasiKm() ;
+      << b->getSubelerArasiKm() << b->getId() ;
 
     return a;
 }
@@ -89,8 +103,9 @@ QDataStream &operator>>(QDataStream &a, KRGSubeBilgileriPtr &b)
     Metin subeSorumlusu;
     TcNo subeTel;
     TelNo subelerArasiKm;
+    IdTuru subeId;
 
-    a >> subeAdi >> subeAdresi >> subeSorumlusu >> subeTel>> subelerArasiKm;
+    a >> subeAdi >> subeAdresi >> subeSorumlusu >> subeTel>> subelerArasiKm >> subeId;
 
     b = std::make_shared<KRGSubeBilgileri>();
 
@@ -99,6 +114,7 @@ QDataStream &operator>>(QDataStream &a, KRGSubeBilgileriPtr &b)
     b->setSubeSorumlusu(subeSorumlusu);
     b->setSubeTel(subeTel);
     b->setSubelerArasiKm(subelerArasiKm);
+    b->setId(subeId);
 
 
     return a;

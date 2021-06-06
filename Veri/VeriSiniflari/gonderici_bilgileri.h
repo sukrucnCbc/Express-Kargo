@@ -16,7 +16,7 @@ public:
     Q_PROPERTY(Metin gondericiAdres READ getGondericiAdres WRITE setGondericiAdres NOTIFY gondericiAdresDegisti)
     Q_PROPERTY(TcNo gondericiTc READ getGondericiTc WRITE setGondericiTc NOTIFY gondericiTcDegisti)
     Q_PROPERTY(TelNo gondericiTelNo READ getGondericiTelNo WRITE setGondericiTelNo NOTIFY gondericiTelNoDegisti)
-
+    Q_PROPERTY(IdTuru id READ getId WRITE setId NOTIFY idDegisti)
 
 
 
@@ -26,6 +26,7 @@ public:
     Metin getGondericiAdres() const;
     TcNo getGondericiTc() const;
     TelNo getGondericiTelNo() const;
+    IdTuru getId() const;
 
 
 signals:
@@ -34,6 +35,7 @@ signals:
     void gondericiAdresDegisti(const Metin &value);
     void gondericiTcDegisti(const TcNo &value);
     void gondericiTelNoDegisti(const TelNo &value);
+    void idDegisti(const IdTuru &value);
 
 public slots:
 
@@ -42,7 +44,7 @@ public slots:
     void setGondericiAdres(const Metin &value);
     void setGondericiTc(const TcNo &value);
     void setGondericiTelNo(const TelNo &value);
-
+    void setId(const IdTuru &value);
 private:
 
     Metin gondericiAdi;
@@ -50,6 +52,7 @@ private:
     Metin gondericiAdres;
     TcNo gondericiTc;
     TelNo gondericiTelNo;
+    IdTuru gondericiId;
 };
 
 

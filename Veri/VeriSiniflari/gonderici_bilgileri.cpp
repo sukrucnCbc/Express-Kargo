@@ -89,10 +89,24 @@ void KRGGondericiBilgileri::setGondericiTelNo(const TelNo &value)
 
     gondericiTelNo = value;
 }
+
+IdTuru KRGGondericiBilgileri::getId() const
+{
+    return gondericiId;
+}
+
+void KRGGondericiBilgileri::setId(const IdTuru &value)
+{
+    if (value == gondericiId)
+        return;
+    gondericiId = value;
+    emit idDegisti(gondericiId);
+    gondericiId = value;
+}
 QDataStream &operator<<(QDataStream &a, const KRGGondericiBilgileriPtr &b)
 {
     a << b->getGondericiAdi() << b->getGondericiSoyadi() << b->getGondericiAdres() << b->getGondericiTc()
-      << b->getGondericiTelNo() ;
+      << b->getGondericiTelNo() << b->getId();
 
     return a;
 }
@@ -104,8 +118,9 @@ QDataStream &operator>>(QDataStream &a, KRGGondericiBilgileriPtr &b)
     Metin gondericiAdres;
     TcNo gondericiTc;
     TelNo gondericiTelNo;
+    IdTuru gondericiId;
 
-    a >> gondericiAdi >> gondericiSoyadi >> gondericiAdres >> gondericiTc >> gondericiTelNo;
+    a >> gondericiAdi >> gondericiSoyadi >> gondericiAdres >> gondericiTc >> gondericiTelNo >> gondericiId;
 
     b = std::make_shared<KRGGondericiBilgileri>();
 
@@ -114,6 +129,7 @@ QDataStream &operator>>(QDataStream &a, KRGGondericiBilgileriPtr &b)
     b->setGondericiAdres(gondericiAdres);
     b->setGondericiTc(gondericiTc);
     b->setGondericiTelNo(gondericiTelNo);
+    b->setId(gondericiId);
 
 
     return a;
