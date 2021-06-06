@@ -33,17 +33,17 @@ void KRGKargoBilgileri::setTeslimatSaatAraligi(const Metin &value)
     teslimatSaatAraligi = value;
 }
 
-Metin KRGKargoBilgileri::getKargoId() const
+IdTuru KRGKargoBilgileri::getId() const
 {
     return kargoId;
 }
 
-void KRGKargoBilgileri::setKargoId(const Metin &value)
+void KRGKargoBilgileri::setId(const IdTuru &value)
 {
     if (value == kargoId)
         return;
     kargoId = value;
-    emit KargoIdDegisti(kargoId);
+    emit idDegisti(kargoId);
     kargoId = value;
 }
 
@@ -115,4 +115,37 @@ void KRGKargoBilgileri::setMesafeyeDayaliTahminAlgoritmasi(const ReelSayi &value
     MesafeyeDayaliTahminAlgoritmasi = value;
     emit MesafeyeDayaliTahminAlgoritmasiDegisti(MesafeyeDayaliTahminAlgoritmasi);
     MesafeyeDayaliTahminAlgoritmasi = value;
+}
+QDataStream &operator<<(QDataStream &a, const KRGKargoBilgileriPtr &b)
+{
+    a << b->getGidenAdres() << b->getTeslimatSaatAraligi() << b->getId() << b->getKargoDurumu()
+      << b->getOdeme() << b->getGonderiFiyat()<< b->getGonderiDesiBoyut()<< b->getMesafeyeDayaliTahminAlgoritmasi() ;
+
+    return a;
+}
+
+QDataStream &operator>>(QDataStream &a, KRGKargoBilgileriPtr &b)
+{
+    Metin gidenAdres;
+    Metin teslimatSaatAraligi;
+    IdTuru kargoId;
+    Metin kargoDurumu;
+    ParaBirimi odeme;
+    ParaBirimi gonderiFiyat;
+    DesiHesabi gonderiDesiBoyut;
+    ReelSayi MesafeyeDayaliTahminAlgoritmasi;
+
+    a >> gidenAdres >> teslimatSaatAraligi>> kargoId >> kargoDurumu>> odeme >> gonderiFiyat >>gonderiDesiBoyut >>MesafeyeDayaliTahminAlgoritmasi ;
+
+    b = std::make_shared<KRGKargoBilgileri>();
+
+    b->setGidenAdres(gidenAdres);
+    b->setTeslimatSaatAraligi(teslimatSaatAraligi);
+    b->setId(kargoId);
+    b->setKargoDurumu(kargoDurumu);
+    b->setOdeme(odeme);
+    b->setMesafeyeDayaliTahminAlgoritmasi(kargoId);
+    b->setGonderiDesiBoyut(gonderiDesiBoyut);
+    b->setGonderiFiyat(gonderiFiyat);
+    return a;
 }

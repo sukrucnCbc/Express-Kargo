@@ -17,9 +17,9 @@ public:
     Q_PROPERTY(Metin teslimatSaatAraligi READ getTeslimatSaatAraligi
                WRITE setTeslimatSaatAraligi
                NOTIFY TeslimatSaatAraligiDegisti)
-    Q_PROPERTY(Metin kargoId READ getKargoId
-               WRITE setKargoId
-               NOTIFY KargoIdDegisti)
+    Q_PROPERTY(IdTuru id READ getId
+               WRITE setId
+               NOTIFY idDegisti)
     Q_PROPERTY(Metin KargoDurumu READ getKargoDurumu
                WRITE setKargoDurumu
                NOTIFY KargoDurumuDegisti)
@@ -38,7 +38,7 @@ public:
 
     Metin getGidenAdres() const;
     Metin getTeslimatSaatAraligi() const;
-    Metin getKargoId() const;
+    IdTuru getId() const;
     Metin getKargoDurumu() const;
     ParaBirimi getOdeme() const;
     ParaBirimi getGonderiFiyat() const;
@@ -51,7 +51,7 @@ signals:
     void MesafeyeDayaliTahminAlgoritmasiDegisti(const ReelSayi &value);
     void OdemeDegisti(const ParaBirimi &value);
     void KargoDurumuDegisti(const Metin &value);
-    void KargoIdDegisti(const Metin &value);
+    void idDegisti(const IdTuru &value);
     void TeslimatSaatAraligiDegisti(const Metin &value);
     void GidenAdresDegisti(const Metin &value);
 
@@ -62,14 +62,14 @@ public slots:
     void setMesafeyeDayaliTahminAlgoritmasi(const ReelSayi &value);
     void setOdeme(const ParaBirimi &value);
     void setKargoDurumu(const Metin &value);
-    void setKargoId(const Metin &value);
+    void setId(const IdTuru &value);
     void setTeslimatSaatAraligi(const Metin &value);
     void setGidenAdres(const Metin &value);
 
 private:
     Metin gidenAdres;
     Metin teslimatSaatAraligi;
-    Metin kargoId;
+    IdTuru kargoId;
     Metin kargoDurumu;
     ParaBirimi odeme;
     ParaBirimi gonderiFiyat;
