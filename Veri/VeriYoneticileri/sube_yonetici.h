@@ -1,17 +1,18 @@
-#ifndef _YONETICI_H
-#define ALICI_YONETICI_H
+#ifndef SUBE_YONETICI_H
+#define SUBE_YONETICI_H
+
 
 #include <Veri/VeriYoneticileri/temel_veri_yoneticileri.h>
 #include <QMainWindow>
 #include <QObject>
 
-class KRGSubeYonetici
+class KRGSubeYoneticisi
         : public QObject,
-        public TemelVeriYoneticileri<KRGAliciBilgileri, KRGAliciBilgileriPtr>
+        public TemelVeriYoneticileri<KRGSubeBilgileri, KRGSubeBilgileriPtr>
 {
     Q_OBJECT
 public:
-    explicit KRGAliciYoneticisi(QObject *parent = nullptr);
+    explicit KRGSubeYoneticisi(QObject *parent = nullptr);
 
     Ptr kopyaOlustur(Ptr kaynak) const;
 
@@ -20,4 +21,4 @@ signals:
 };
 
 
-#endif // ALICI_YONETICI_H
+#endif // SUBE_YONETICI_H
