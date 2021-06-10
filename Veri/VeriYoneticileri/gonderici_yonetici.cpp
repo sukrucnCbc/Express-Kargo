@@ -1,6 +1,10 @@
 #include "gonderici_yonetici.h"
 #include <Veri/VeriSiniflari/gonderici_bilgileri.h>
-#include <QtMath>
+KRGGondericiYoneticisi::KRGGondericiYoneticisi(QObject *parent) : QObject(parent)
+{
+
+}
+
 
 
 KRGGondericiYoneticisi::Ptr KRGGondericiYoneticisi::kopyaOlustur(TemelVeriYoneticileri::Ptr kaynak) const

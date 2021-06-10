@@ -1,6 +1,6 @@
 #include "alici_bilgileri.h"
 
-KRGAliciBilgileri::KRGAliciBilgileri(QWidget *parent) : QMainWindow(parent)
+KRGAliciBilgileri::KRGAliciBilgileri(QObject *parent) : QObject(parent)
 {
 
 }

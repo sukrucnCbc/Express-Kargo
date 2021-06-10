@@ -1,16 +1,15 @@
 #ifndef SUBE_BILGILERI_H
 #define SUBE_BILGILERI_H
 
-#include <QMainWindow>
 #include <QObject>
 #include <Veri/tanimlar.h>
 
-class KRGSubeBilgileri : public QMainWindow
+class KRGSubeBilgileri : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit KRGSubeBilgileri(QWidget *parent = nullptr);
+    explicit KRGSubeBilgileri(QObject *parent = nullptr);
     Q_PROPERTY(Metin subeAdi READ getSubeAdi WRITE
                setSubeAdi NOTIFY subeAdiDegisti)
     Q_PROPERTY(Metin subeAdresi READ getSubeAdresi WRITE
@@ -58,5 +57,8 @@ private:
     AraMesafe subelerArasiKm;
     IdTuru subeId;
 };
+
+QDataStream &operator<<(QDataStream &a, const KRGSubeBilgileriPtr &b);
+QDataStream &operator>>(QDataStream &a, KRGSubeBilgileriPtr &b);
 
 #endif // SUBE_BILGILERI_H

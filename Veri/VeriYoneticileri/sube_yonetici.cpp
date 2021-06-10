@@ -1,6 +1,10 @@
 #include "sube_yonetici.h"
 #include <Veri/VeriSiniflari/sube_bilgileri.h>
-#include <QtMath>
+KRGSubeYoneticisi::KRGSubeYoneticisi(QObject *parent) : QObject(parent)
+{
+
+}
+
 
 KRGSubeYoneticisi::Ptr KRGSubeYoneticisi::kopyaOlustur(TemelVeriYoneticileri::Ptr kaynak) const
 

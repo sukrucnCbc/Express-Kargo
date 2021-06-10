@@ -1,15 +1,14 @@
 #ifndef KARGO_BILGILERI_H
 #define KARGO_BILGILERI_H
 
-#include <QMainWindow>
 #include <Veri/tanimlar.h>
 #include <QObject>
 
-class KRGKargoBilgileri : public QMainWindow
+class KRGKargoBilgileri : public QObject
 {
     Q_OBJECT
 public:
-    explicit KRGKargoBilgileri(QWidget *parent = nullptr);
+    explicit KRGKargoBilgileri(QObject *parent = nullptr);
 
     Q_PROPERTY(Metin gidenAdres READ getGidenAdres
                WRITE setGidenAdres
@@ -77,5 +76,7 @@ private:
     ReelSayi MesafeyeDayaliTahminAlgoritmasi;
 
 };
+QDataStream &operator<<(QDataStream &a, const KRGKargoBilgileriPtr &b);
+QDataStream &operator>>(QDataStream &a, KRGKargoBilgileriPtr &b);
 
 #endif // KARGO_BILGILERI_H

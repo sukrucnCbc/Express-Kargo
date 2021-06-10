@@ -3,7 +3,6 @@
 
 
 #include <Veri/VeriYoneticileri/temel_veri_yoneticileri.h>
-#include <QMainWindow>
 #include <QObject>
 
 class KRGSubeYoneticisi

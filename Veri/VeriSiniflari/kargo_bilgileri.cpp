@@ -1,6 +1,6 @@
 #include "kargo_bilgileri.h"
 
-KRGKargoBilgileri::KRGKargoBilgileri(QWidget *parent) : QMainWindow(parent)
+KRGKargoBilgileri::KRGKargoBilgileri(QObject *parent) : QObject(parent)
 {
 
 }

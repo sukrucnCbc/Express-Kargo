@@ -1,6 +1,11 @@
 #include "alici_yonetici.h"
 #include <Veri/VeriSiniflari/alici_bilgileri.h>
-#include <QtMath>
+KRGAliciYoneticisi::KRGAliciYoneticisi(QObject *parent) : QObject(parent)
+{
+
+}
+
+
 
 KRGAliciYoneticisi::Ptr KRGAliciYoneticisi::kopyaOlustur(TemelVeriYoneticileri::Ptr kaynak) const
 

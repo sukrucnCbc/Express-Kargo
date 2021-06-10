@@ -1,6 +1,6 @@
 #include "sube_bilgileri.h"
 
-KRGSubeBilgileri::KRGSubeBilgileri(QWidget *parent) : QMainWindow(parent)
+KRGSubeBilgileri::KRGSubeBilgileri(QObject *parent) : QObject(parent)
 {
 
 }

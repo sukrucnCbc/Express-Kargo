@@ -3,13 +3,13 @@
 
 #include <QObject>
 #include <Veri/tanimlar.h>
-#include <QMainWindow>
 
-class KRGAliciBilgileri : public QMainWindow
+
+class KRGAliciBilgileri : public QObject
 {
     Q_OBJECT
 public:
-    explicit KRGAliciBilgileri(QWidget *parent = nullptr);
+    explicit KRGAliciBilgileri(QObject *parent = nullptr);
 
     Q_PROPERTY(IdTuru id READ getId WRITE
                setId NOTIFY idDegisti)
@@ -61,5 +61,8 @@ private:
 
 
 };
+
+QDataStream &operator<<(QDataStream &stream, const KRGAliciBilgileriPtr &veri);
+QDataStream &operator>>(QDataStream &stream, KRGAliciBilgileriPtr &veri);
 
 #endif // ALICI_BILGILERI_H

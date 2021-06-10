@@ -16,6 +16,7 @@ SOURCES += \
     Veri/VeriYoneticileri/alici_yonetici.cpp \
     Veri/VeriYoneticileri/gonderici_yonetici.cpp \
     Veri/VeriYoneticileri/sube_yonetici.cpp \
+    Veri/kargo_genel_yonetici.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -28,6 +29,7 @@ HEADERS += \
     Veri/VeriYoneticileri/gonderici_yonetici.h \
     Veri/VeriYoneticileri/sube_yonetici.h \
     Veri/VeriYoneticileri/temel_veri_yoneticileri.h \
+    Veri/kargo_genel_yonetici.h \
     Veri/tanimlar.h \
     mainwindow.h
 

@@ -3,14 +3,14 @@
 
 #include <QObject>
 #include <Veri/tanimlar.h>
-#include <QMainWindow>
 
 
-class KRGGondericiBilgileri : public QMainWindow
+
+class KRGGondericiBilgileri : public QObject
 {
     Q_OBJECT
 public:
-    explicit KRGGondericiBilgileri(QWidget *parent = nullptr);
+    explicit KRGGondericiBilgileri(QObject *parent = nullptr);
     Q_PROPERTY(Metin gondericiAdi READ getGondericiAdi WRITE setGondericiAdi NOTIFY gondericiAdiDegisti)
     Q_PROPERTY(Metin gondericiSoyadi READ getGondericiSoyadi WRITE setGondericiSoyadi NOTIFY gondericiSoyadiDegisti)
     Q_PROPERTY(Metin gondericiAdres READ getGondericiAdres WRITE setGondericiAdres NOTIFY gondericiAdresDegisti)
