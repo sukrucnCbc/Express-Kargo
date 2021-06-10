@@ -6,6 +6,7 @@
 #include <Veri/VeriYoneticileri/alici_yonetici.h>
 #include <Veri/VeriYoneticileri/gonderici_yonetici.h>
 #include <Veri/VeriYoneticileri/sube_yonetici.h>
+#include <Veri/VeriYoneticileri/kargo_bilgileri_yoneticisi.h>
 
 class KRGGenelYonetici: public QObject
 {
@@ -22,6 +23,8 @@ public:
 
     KRGSubeYoneticisi &getSubeBilgileri();
 
+    KRGBilgileriYoneticisi &getKargoBilgileri();
+
 
 
 signals:
@@ -30,6 +33,8 @@ private:
     KRGAliciYoneticisi aliciBilgileri;
     KRGGondericiYoneticisi gondericiBilgileri;
     KRGSubeYoneticisi subeBilgileri;
+    KRGBilgileriYoneticisi kargoBilgileri;
+
 
 
     friend QDataStream &operator<<(QDataStream &a,KRGGenelYonetici &b) ;

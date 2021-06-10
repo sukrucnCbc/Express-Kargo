@@ -1,12 +1,12 @@
 #include "kargo_bilgileri_yoneticisi.h"
 #include <Veri/VeriSiniflari/kargo_bilgileri.h>
 
-Kargo_Bilgileri_Yoneticisi::Kargo_Bilgileri_Yoneticisi(QObject *parent) : QObject(parent), TemelVeriYoneticileri<KRGKargoBilgileri, KRGKargoBilgileriPtr>()
+KRGBilgileriYoneticisi::KRGBilgileriYoneticisi(QObject *parent) : QObject(parent), TemelVeriYoneticileri<KRGKargoBilgileri, KRGKargoBilgileriPtr>()
 {
 
 }
-Kargo_Bilgileri_Yoneticisi::Ptr Kargo_Bilgileri_Yoneticisi::kopyaOlustur(
-    Kargo_Bilgileri_Yoneticisi::Ptr kaynak) const
+KRGBilgileriYoneticisi::Ptr KRGBilgileriYoneticisi::kopyaOlustur(
+    KRGBilgileriYoneticisi::Ptr kaynak) const
 {
     Ptr kopya = yeni();
 

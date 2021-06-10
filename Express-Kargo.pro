@@ -15,6 +15,7 @@ SOURCES += \
     Veri/VeriSiniflari/sube_bilgileri.cpp \
     Veri/VeriYoneticileri/alici_yonetici.cpp \
     Veri/VeriYoneticileri/gonderici_yonetici.cpp \
+    Veri/VeriYoneticileri/kargo_bilgileri_yoneticisi.cpp \
     Veri/VeriYoneticileri/sube_yonetici.cpp \
     Veri/kargo_genel_yonetici.cpp \
     main.cpp \
@@ -27,6 +28,7 @@ HEADERS += \
     Veri/VeriSiniflari/sube_bilgileri.h \
     Veri/VeriYoneticileri/alici_yonetici.h \
     Veri/VeriYoneticileri/gonderici_yonetici.h \
+    Veri/VeriYoneticileri/kargo_bilgileri_yoneticisi.h \
     Veri/VeriYoneticileri/sube_yonetici.h \
     Veri/VeriYoneticileri/temel_veri_yoneticileri.h \
     Veri/kargo_genel_yonetici.h \
