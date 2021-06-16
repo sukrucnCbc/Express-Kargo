@@ -9,7 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    UI/VeriFormlari/gonderi_bilgileri_form.cpp \
+    UI/VeriFormlari/kargo_gonder.cpp \
     Veri/VeriSiniflari/alici_bilgileri.cpp \
     Veri/VeriSiniflari/gonderici_bilgileri.cpp \
     Veri/VeriSiniflari/kargo_bilgileri.cpp \
@@ -23,7 +23,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
-    UI/VeriFormlari/gonderi_bilgileri_form.h \
+    UI/VeriFormlari/kargo_gonder.h \
     Veri/VeriSiniflari/alici_bilgileri.h \
     Veri/VeriSiniflari/gonderici_bilgileri.h \
     Veri/VeriSiniflari/kargo_bilgileri.h \
@@ -38,7 +38,7 @@ HEADERS += \
     mainwindow.h
 
 FORMS += \
-    UI/VeriFormlari/gonderi_bilgileri_form.ui \
+    UI/VeriFormlari/kargo_gonder.ui \
     mainwindow.ui \
     sinif.gorunum/kargo_takip.ui
 

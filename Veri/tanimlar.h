@@ -12,7 +12,7 @@ typedef quint64 IdTuru;
 typedef qint32 TcNo;
 typedef qint16 AraMesafe;
 
-typedef double TelNo;
+typedef quint32 TelNo;
 
 typedef double ReelSayi ;
 
@@ -27,14 +27,17 @@ typedef QTime Saat;
 typedef QDateTime TarihSaat;
 
 typedef enum {
-    KRGGonderici = 1,
-    KRGAlici = 2,
-    KRGSube = 4,
-    KRGAdres = 8,
-    KRGDesi = 16,
-    KRGTeslimat = 32
+    KRGNakit = 1,
+    KRGKapidaOde = 2,
+    KRGAliciOde = 4,
+} KRGOdeme;
 
-} KRGDetay;
+typedef enum{
+    KRGGiyim = 1,
+    KRGEvrak = 2,
+    KRGKitap = 4,
+    KRGKirilcakEsya = 8,
+} KargoDurumu;
 
 typedef QByteArray Resim;
 
