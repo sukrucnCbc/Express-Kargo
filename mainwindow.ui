@@ -20,8 +20,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>210</y>
+      <x>340</x>
+      <y>170</y>
       <width>581</width>
       <height>151</height>
      </rect>
@@ -38,11 +38,19 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>330</x>
       <y>390</y>
-      <width>80</width>
+      <width>151</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Perpetua Titling MT</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
      <string>Kargo Gönder</string>
@@ -53,9 +61,17 @@
      <rect>
       <x>550</x>
       <y>390</y>
-      <width>101</width>
+      <width>171</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Perpetua Titling MT</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
      <string>Gönderi Geçmişi</string>
@@ -64,11 +80,19 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>810</x>
+      <x>789</x>
       <y>390</y>
-      <width>80</width>
+      <width>101</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Perpetua Titling MT</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
      <string>Şubeler</string>
@@ -78,7 +102,7 @@
     <property name="geometry">
      <rect>
       <x>570</x>
-      <y>510</y>
+      <y>490</y>
       <width>80</width>
       <height>22</height>
      </rect>
@@ -115,6 +139,7 @@
     <property name="title">
      <string>Kargo Gönder</string>
     </property>
+    <addaction name="actionKargo_G_nder"/>
    </widget>
    <addaction name="menuKargo_G_nder"/>
    <addaction name="menuKargo_Takip"/>
@@ -148,6 +173,11 @@
   <action name="actionBilgiler">
    <property name="text">
     <string>Bilgiler</string>
+   </property>
+  </action>
+  <action name="actionKargo_G_nder">
+   <property name="text">
+    <string>Kargo Gönder</string>
    </property>
   </action>
  </widget>

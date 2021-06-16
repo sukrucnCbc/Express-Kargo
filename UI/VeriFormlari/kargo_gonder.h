@@ -33,3 +33,5 @@ private:
 };
 
 #endif // KARGO_GONDER_H
+QDataStream &operator<<(QDataStream &a, const kargo_gonder &b);
+QDataStream &operator>>(QDataStream &a, kargo_gonder &b);

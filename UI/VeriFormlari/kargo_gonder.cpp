@@ -31,7 +31,6 @@ void kargo_gonder::setGveri(const KRGGondericiBilgileriPtr &value)
     ui->le_gonAD->setText(gveri->getGondericiAdi());
     ui->le_gonSad->setText(gveri->getGondericiSoyadi());
     ui->pte_gonAdres->document()->setPlainText(gveri->getGondericiAdres());
-    ui->le_gonTel->Int
 }
 
 KRGAliciBilgileriPtr kargo_gonder::getAveri() const
@@ -46,6 +45,9 @@ KRGAliciBilgileriPtr kargo_gonder::getAveri() const
 void kargo_gonder::setAveri(const KRGAliciBilgileriPtr &value)
 {
     averi = value;
+    ui->le_alAd->setText(averi->getAliciAdi());
+    ui->le_alSoyad->setText(averi->getAliciSoyadi());
+    ui->pte_alAdres->document()->setPlainText(averi->getAliciAdres());
 }
 
 KRGKargoBilgileriPtr kargo_gonder::getKveri() const
@@ -66,5 +68,7 @@ KRGKargoBilgileriPtr kargo_gonder::getKveri() const
 void kargo_gonder::setKveri(const KRGKargoBilgileriPtr &value)
 {
     kveri = value;
-    ui->rb
+
+
+
 }

@@ -3,6 +3,7 @@
 
 #include <Veri/tanimlar.h>
 #include <QObject>
+#include <Veri/VeriSiniflari/kargo_bilgileri.h>
 
 template<class V, class P>
 class TemelVeriYoneticileri
@@ -27,7 +28,7 @@ public:
 
     void ekle(Ptr kargo)
     {
-        // ilacId = 0, enSonId = 0
+
         kargo->setId(enSonId++); // kargoId = 0, enSonId = 1
         veriler.append(kargo);
     }

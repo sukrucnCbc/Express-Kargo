@@ -18,7 +18,7 @@ typedef double ReelSayi ;
 
 typedef float DesiHesabi;
 
-typedef float ParaBirimi;
+typedef double ParaBirimi;
 
 typedef QString Metin;
 
